@@ -1,5 +1,9 @@
+const { MOVE_KEYS } = require("./constants");
+
 // Stores the active TCP connection object.
 let connection; // places a reference conn in another variable connection which is in a global scope 
+
+
 
 //setup stdin (standart input)
 const setupInput = (conn) => {
@@ -18,19 +22,15 @@ const handleUserInput = function (key) {
   if (key === "\u0003") {
     process.exit();
   }
-  // wasd movements 
-  if (key === "w") {
-    connection.write("Move: up");
+  
+  // wasd movements
+  for (let keys in MOVE_KEYS) {
+    if (key === keys) {
+      connection.write(MOVE_KEYS[keys]);
+    }
   }
-  if (key === "a") {
-    connection.write("Move: left");
-  }
-  if (key === "s") {
-    connection.write("Move: down");
-  }
-  if (key === "d") {
-    connection.write("Move: right");
-  }
+  
+
   // sending messages to the server for everyone to see 
   if (key === "c") {
     connection.write("Say: Level Up!");

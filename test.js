@@ -1,5 +1,3 @@
-const IP = "localhost";
-const PORT = 50541; 
 const MOVE_KEYS = {
   a: "Move: left",
   w: "Move: up",
@@ -7,9 +5,6 @@ const MOVE_KEYS = {
   d: "Move: right"
   }; 
 
-module.exports = {
-  IP,
-  PORT,
-  MOVE_KEYS
-};
-
+  for (let keys in MOVE_KEYS) {
+    console.log(MOVE_KEYS[keys]);
+  }
