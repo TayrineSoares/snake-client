@@ -22,9 +22,12 @@ Before you can run this client, you will need to be running the server side whic
 - Use the keys (`'w', 'a', 's', 'd'`) to navigate the snake up, left, down, or right (in respective order).
 - Eat the red dot to gain points. 
 - If the snake collides with the wall or its own tail, it's game over.
-- Use the keys (`'p', 'o', 'i'`) to send the following messages: 
-  `'p'`: Level Up!
-  `'o'`: Thank you, next!
-  `'i'`: Well done!
+- Use the keys (`'p', 'o', 'i'`) to send the following messages:
+
+  `'p'`: Level Up! ,
+
+  `'o'`: Thank you, next! ,
+
+  `'i'`: Well done! .
 
 - Press `CTRL` + `C` to quit the game.
