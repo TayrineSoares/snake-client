@@ -23,7 +23,9 @@ const connect = function () {
     
     conn.write("Name: TAY"); 
     
-    conn.write("Move: up");
+    // setTimeout(() => {
+    //   conn.write("Move: up");
+    //  }, 1000);
     
   });
  
