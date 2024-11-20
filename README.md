@@ -9,8 +9,7 @@ This is simply a multiplayer take on the genre.
 Before you can run this client, you will need to be running the server side which you can download and install from here. 
 
 ## Final Product
-!["🐍🐍 Snake! 🐍🐍 "] 
-(https://github.com/TayrineSoares/snake-client/blob/dd4815fbebd39d18de4acd6ea088dde50cf4c7ca/Snake-Screenshot.png)
+![🐍🐍 Snake! 🐍🐍 ](https://github.com/TayrineSoares/snake-client/blob/dd4815fbebd39d18de4acd6ea088dde50cf4c7ca/Snake-Screenshot.png)
 
 
 ## Getting Started
