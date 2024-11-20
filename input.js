@@ -9,11 +9,26 @@ const setupInput = function () {
   return stdin;   
 };
 
-// ensures that we can terminate the game using ctrl + c.
+// handling user inputs 
 const handleUserInput = function (key) {
+  // ensures that we can terminate the game using ctrl + c.
   if (key === "\u0003") {
     process.exit();
   }
+  // wasd movements 
+  if (key === "w") {
+    console.log("Move: up");
+  }
+  if (key === "a") {
+    console.log("Move: left");
+  }
+  if (key === "s") {
+    console.log("Move: down");
+  }
+  if (key === "d") {
+    console.log("Move: right");
+  }
+
 };
 
 module.exports = setupInput;
