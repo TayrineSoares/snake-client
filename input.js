@@ -31,6 +31,13 @@ const handleUserInput = function (key) {
   if (key === "d") {
     connection.write("Move: right");
   }
+  // sending messages to the server for everyone to see 
+  if (key === "c") {
+    connection.write("Say: Level Up!");
+  }
+  if (key === "v") {
+    connection.write("Say: Thank you, next!");
+  }
 
 };
 
