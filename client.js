@@ -13,14 +13,20 @@ const connect = function () {
   });
 
   // the data event listener logs data received from the server. 
-  conn.on('data', (data) => {
+  conn.on("data", (data) => {
     console.log('Server says: ', data);
   });
 
   // sending a Name to the server (.write)
+  // sending the string "Move: up" as data to the server via the conn object.
   conn.on("connect", () => {
-    conn.write("Name: TAY");
+    
+    conn.write("Name: TAY"); 
+    
+    conn.write("Move: up");
+    
   });
+ 
 
   // interpret incoming data as text 
   conn.setEncoding("utf8");
