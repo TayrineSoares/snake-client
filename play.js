@@ -8,8 +8,12 @@ const connect = function () {
   });
 
   // Providing a message when a successful connection is made. 
-  conn.on("connect", (data) => {
+  conn.on("connect", () => {
     console.log("You have been connected!");
+  });
+
+  conn.on('data', (data) => {
+    console.log('Server says: ', data);
   });
 
 // interpret incoming data as text 
