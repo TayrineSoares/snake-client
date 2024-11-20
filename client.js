@@ -7,14 +7,19 @@ const connect = function () {
     port: 50541
   });
 
-  // Providing a message when a successful connection is made. 
+  // providing a message when a successful connection is made. 
   conn.on("connect", () => {
-    console.log("You have been connected!");
+    console.log("Successfully connected to game server!");
   });
 
   // the data event listener logs data received from the server. 
   conn.on('data', (data) => {
     console.log('Server says: ', data);
+  });
+
+  // sending a Name to the server (.write)
+  conn.on("connect", () => {
+    conn.write("Name: TAY");
   });
 
   // interpret incoming data as text 
@@ -23,6 +28,6 @@ const connect = function () {
 
 };
 
-console.log("Connecting...");
+
 
 module.exports = connect; 
