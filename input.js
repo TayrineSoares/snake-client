@@ -1,8 +1,7 @@
-const { MOVE_KEYS } = require("./constants");
+const { MOVE_KEYS, CHAT_KEYS } = require("./constants");
 
 // Stores the active TCP connection object.
 let connection; // places a reference conn in another variable connection which is in a global scope 
-
 
 
 //setup stdin (standart input)
@@ -30,13 +29,11 @@ const handleUserInput = function (key) {
     }
   }
   
-
   // sending messages to the server for everyone to see 
-  if (key === "c") {
-    connection.write("Say: Level Up!");
-  }
-  if (key === "v") {
-    connection.write("Say: Thank you, next!");
+  for (let keys in CHAT_KEYS) {
+    if (key === keys) {
+      connection.write(CHAT_KEYS[keys]);
+    }
   }
 
 };
