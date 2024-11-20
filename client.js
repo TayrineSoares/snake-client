@@ -18,14 +18,8 @@ const connect = function () {
   });
 
   // sending a Name to the server (.write)
-  // sending the string "Move: up" as data to the server via the conn object.
   conn.on("connect", () => {
-    
-    conn.write("Name: TAY"); 
-    
-    // setTimeout(() => {
-    //   conn.write("Move: up");
-    //  }, 1000);
+     conn.write("Name: TAY");
     
   });
  
@@ -36,5 +30,7 @@ const connect = function () {
 
 };
 
+//connect() returns an object that can be used to interact with the server
 
-module.exports = connect; 
+
+module.exports = { connect }; 

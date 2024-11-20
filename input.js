@@ -1,6 +1,9 @@
+// Stores the active TCP connection object.
+let connection; // places a reference conn in another variable connection which is in a global scope 
 
 //setup stdin (standart input)
-const setupInput = function () {
+const setupInput = (conn) => {
+  connection = conn; // the object returned by connect()
   const stdin = process.stdin;
   stdin.setRawMode(true); 
   stdin.setEncoding("utf8"); 
@@ -17,20 +20,23 @@ const handleUserInput = function (key) {
   }
   // wasd movements 
   if (key === "w") {
-    console.log("Move: up");
+    connection.write("Move: up");
   }
   if (key === "a") {
-    console.log("Move: left");
+    connection.write("Move: left");
   }
   if (key === "s") {
-    console.log("Move: down");
+    connection.write("Move: down");
   }
   if (key === "d") {
-    console.log("Move: right");
+    connection.write("Move: right");
   }
 
 };
 
-module.exports = setupInput;
+module.exports = { 
+  setupInput, 
+  handleUserInput
+};
 
 // handleUserInput is only called by setupInput which is already in this file. Since handleUserInput does not need to be called or referenced elsewhere, it does not need to be exported from the input module.
