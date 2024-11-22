@@ -17,16 +17,12 @@ const handleUserInput = function(key) {
     process.exit();
   }
   
-  for (let keys in MOVE_KEYS) {
-    if (key === keys) {
-      connection.write(MOVE_KEYS[keys]);
-    }
+  if (key in MOVE_KEYS) {
+    connection.write(MOVE_KEYS[key]);
   }
   
-  for (let keys in CHAT_KEYS) {
-    if (key === keys) {
-      connection.write(CHAT_KEYS[keys]);
-    }
+  if (key in CHAT_KEYS) {
+    connection.write(CHAT_KEYS[keys]);
   }
 };
 
